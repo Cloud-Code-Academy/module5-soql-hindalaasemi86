@@ -3,7 +3,7 @@
 * It encapsulates a series of test methods, each carefully designed to validate the individual methods in the SOQL class, ensuring they are functioning accurately and correctly.
 * The Salesforce Assert class is an essential part of these test methods to assert and validate the outcomes of the SOQL queries.
 *
-* Test methods encapsulated in this class are devoted to testing SOQL queries, which include SELECT statements, WHERE clause filters, Relationship queries, and usage of the LIMIT keyword.
+* Test smethods encapsulated in this class are devoted to testing SOQL queries, which include SELECT statements, WHERE clause filters, Relationship queries, and usage of the LIMIT keyword.
 * Users of this class can expect to gain an understanding of how to write unit tests for SOQL queries in Apex and Salesforce, enabling them to validate their own custom SOQL queries.
 */
 
