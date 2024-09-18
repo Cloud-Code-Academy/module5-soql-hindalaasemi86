@@ -749,7 +749,7 @@ public with sharing class SOQLTest {
     System.debug('Updated Opportunity Primary_Contact__c: ' + updatedOpp.Primary_Contact__c);
 
         // Assert that the Primary Contact was set correctly
-        System.assertEquals(testContact2, updatedOpp.Primary_Contact__c, 'Primary Contact was not set correctly.');
+        System.assertEquals(testContact2.Id, updatedOpp.Primary_Contact__c, 'Primary Contact was not set correctly.');
     }
 
 
