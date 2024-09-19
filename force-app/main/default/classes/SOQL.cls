@@ -76,7 +76,7 @@ public with sharing class SOQL {
      * @return A list of Opportunities with important opportunities fields
      * Update the corresponding test class and testGetClosedWonOpportunityCountByAccount method to cover this method
      */
-    public static List<Opportunity> GetClosedWonOpportunityCountByAccount (String accountId) {
+    public static List<Opportunity> getClosedWonOpportunityCountByAccount (String accountId) {
     //  The body of the method
     List<Opportunity> oppList = [SELECT Id, CloseDate,Name, Amount  , AccountId ,StageName
                                   FROM Opportunity 
@@ -92,7 +92,7 @@ public with sharing class SOQL {
      * @return The Integer count of Account records.
      * Update the corresponding test class and testGetAccountCount method to cover this method
      */
-   public static Integer GetAccountCount () {
+   public static Integer getAccountCount () {
     //  The body of the method
     integer i=0;
     List<Account> allAccountList = [SELECT Id FROM Account];
@@ -111,7 +111,7 @@ public with sharing class SOQL {
      * @return A map of Task Ids to Task records.
      * Update the corresponding test class and testGetTasksDueNextWeek method to cover this method
      */
-   public static Map<Id,Task> GetTasksDueNextWeek () {
+   public static Map<Id,Task> getTasksDueNextWeek () {
     //  The body of the method
     List<Task>taskDueNextWeek =[SELECT Id, Subject, ActivityDate FROM Task WHERE ActivityDate =NEXT_N_DAYS:7];
     //create Map
@@ -130,7 +130,7 @@ public with sharing class SOQL {
      * @return A list of Contact records.
      * Update the corresponding test class and testGetContactsByEmailDomain method to cover this method
      */
-    public static List<Contact> GetContactsByEmailDomain() {
+    public static List<Contact> getContactsByEmailDomain() {
     //  The body of the method
     List<Contact> contactList = [SELECT Id,Name, Email FROM Contact WHERE Email LIKE '%@example.com'];
     return contactList;
