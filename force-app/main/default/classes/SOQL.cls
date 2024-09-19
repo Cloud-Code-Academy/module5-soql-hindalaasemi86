@@ -172,7 +172,7 @@ public with sharing class SOQL {
      * @return A list of Lead records.
      * Update the corresponding test class and testGetLeadsBySourceOrTitle method to cover this method
      */
-   public static List<Lead> GetLeadsBySourceOrTitle (String leadSource, String keyword) {
+   public static List<Lead> getLeadsBySourceOrTitle (String leadSource, String keyword) {
     //  The body of the method
     if (leadSource == null && string.isBlank(keyword)) {
     return new List<Lead>();
@@ -194,7 +194,7 @@ public with sharing class SOQL {
         // Query the Contacts
         List<Contact> contactList =[SELECT LastName, Id, AccountId FROM Contact WHERE AccountId =:accountId];
         // Loop through each Contact and add the LastName to the list
-        for (Contact C:contactList) {
+        for (Contact c:contactList) {
            conatctLastName.add(c.LastName);
         }
 
@@ -278,7 +278,7 @@ public with sharing class SOQL {
         // Query the Cases
         List<Case> caseList =new List<Case> ([SELECT Id, Subject, AccountId FROM Case WHERE AccountId = :accountId]);
         // Loop through each Case and add the Id to the set
-        for(Case C :caseList) {
+        for(Case c :caseList) {
         caseId.add(c.Id);
         }
 
